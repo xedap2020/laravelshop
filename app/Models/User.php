@@ -13,4 +13,9 @@ class User extends Model
     protected $fillable = ['id', 'name', 'email', 'password', 'status', 'age', 'phoneNumber', 'address', 'role',
         'image_path', 'deleted_at', 'created_at', 'updated_at', 'provider_id', 'provider'];
     protected $hidden = ['password'];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
