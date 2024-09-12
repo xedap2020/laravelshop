@@ -12,7 +12,7 @@ class DashboardController extends Controller
     public function index()
     {
         $count_users = User::count();
-        // $count_posts = Post::count();
+        $count_posts = Post::count();
 
         return view('admin.dashboard', [
             'count_users' => $count_users
